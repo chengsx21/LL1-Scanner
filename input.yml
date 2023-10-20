@@ -1,0 +1,12 @@
+symbol_s:
+  S
+
+production:
+  - [S, A, B]
+  - [A, D, a]
+  - [A]
+  - [B, c, C]
+  - [C, a, A, D, C]
+  - [C]
+  - [D, b]
+  - [D]
