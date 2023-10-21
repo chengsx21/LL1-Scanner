@@ -33,7 +33,7 @@ class SymbolTerm(Symbol):
     '''
     def __init__(self, attr: str) -> None:
         super().__init__()
-        self.attr = attr
+        self.attr = str(attr)
 
     def __eq__(self, other: Any) -> bool:
         if isinstance(other, SymbolTerm):
@@ -50,7 +50,7 @@ class SymbolNonTerm(Symbol):
     '''
     def __init__(self, attr: str) -> None:
         super().__init__()
-        self.attr = attr
+        self.attr = str(attr)
 
     def __eq__(self, other: Any) -> bool:
         if isinstance(other, SymbolNonTerm):
