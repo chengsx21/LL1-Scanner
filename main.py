@@ -103,7 +103,7 @@ class Production:
 EPSILON = SymbolTerm("\u03B5")
 Scanner = LL1Scanner()
 
-def parse_params():
+def parse_params() -> None:
     '''
         Get the params from input.
     '''
@@ -145,7 +145,7 @@ def parse_params():
                         Scanner.production_suf.append(pro_suf)
 
 
-def print_productions():
+def print_productions() -> None:
     '''
         Print the productions.
     '''
@@ -155,7 +155,7 @@ def print_productions():
         print(pro)
 
 
-def init_sets():
+def init_sets() -> None:
     '''
         Initialize the [First] and [Follow] sets.
     '''
@@ -176,7 +176,7 @@ def init_sets():
     Scanner.first = dict(sorted(Scanner.first.items(), key=lambda item: (len(item[0]), item[0])))
     Scanner.follow = dict(sorted(Scanner.follow.items(), key=lambda item: item[0]))
 
-def first_set():
+def first_set() -> None:
     '''
         Get the [First] set of the grammar.
     '''
@@ -221,7 +221,7 @@ def first_set():
                 Scanner.first[str(pro.left)] = update_set
 
 
-def follow_set():
+def follow_set() -> None:
     '''
         Get the [Follow] set of the grammar.
     '''
@@ -256,7 +256,7 @@ def follow_set():
                         Scanner.follow[str(symbol)] = update_set
 
 
-def ps_set():
+def ps_set() -> None:
     '''
         Get the [PS] set of the grammar.
     '''
